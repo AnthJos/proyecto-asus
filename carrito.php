@@ -67,7 +67,7 @@
     <meta charset="Utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1,user-scalable=no">
     <title>ASUS</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,400i,500,500i,600,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -108,15 +108,16 @@
           <div class="well">
             <h1 class="text-center">Tu Carrito De Compras : </h1>
             <?php
+            $total=0;
               if (isset($_SESSION['carrito'])) {
                     $datos=$_SESSION['carrito'];
-                    $total=0;
+
                     for ($i=0; $i <count($datos) ; $i++) {
             ?>
             <div class="list-group">
               <a href="#" class="list-group-item ">
                <div class="col-md-3">
-                  <img class=" img-responsive img-rounded"  src="img/productos<?php echo $datos[$i]['Imagen']; ?>"  >
+                  <img class=" img-responsive "  src="img/productos<?php echo $datos[$i]['Imagen']; ?>"  >
                </div>
                <div class="col-md-6">
                    <h2 class="list-group-item-heading"><?php echo $datos[$i]['Nombre']; ?></h2>
@@ -140,7 +141,7 @@
               }else {
                 echo '<div class="list-group"><a class="list-group-item"><h1 class="text-center">El carrito de compras esta vacio</h1></a></div>';
               }
-                echo '<h1 class="text-center">El Total es : '.$total.' soles</h1>'
+                echo '<h1 class="text-center">El Total es : '.$total.' soles</h1>';
              ?>
 
 

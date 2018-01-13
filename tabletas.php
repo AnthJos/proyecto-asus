@@ -4,7 +4,7 @@
     <meta charset="Utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1,user-scalable=no">
     <title>ASUS</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,400i,500,500i,600,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -52,15 +52,15 @@
                   while ($f=mysqli_fetch_array($re)){
                  ?>
                     <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail"><img src="img/productos/<?php echo $f['imagen'];?>" class="img-thumbnail">
+                        <div class="thumbnail"><img src="img/productos/<?php echo $f['imagen'];?>" class="img-responsive">
                             <div class="caption">
                                 <h3><?php echo $f['nombre'];?></h3>
-                                <p>
+                                <p class="text-center">
                                     <?php echo $f['descripcion'];?>
                                 </p>
-                                <p>A solo :</p>
+                                <p class="text-center">A solo :</p>
                                   <p class="precio">$ <?php echo $f['precio'];?></p>
-                                <p class="boton"><a href="carrito.php?id=<?php echo $f['id'];?>" role="button" class="btn btn-info"><i aria-hidden="true" class="fa fa-shopping-basket"> Añadir al carrito</i></a></p>
+                                <p class="boton"><a href="carrito.php?id=<?php echo $f['id'];?>" role="button" class="btn btn-info"><i aria-hidden="true" class="fa fa-shopping-basket"></i> Añadir al carrito</a></p>
                             </div>
                         </div>
                     </div>

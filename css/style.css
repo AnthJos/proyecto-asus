@@ -1,6 +1,6 @@
 body {
-  font-family: "Roboto";
-  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   font-weight: 400; }
   body .navbar-inverse {
     border-radius: 0px;
@@ -12,7 +12,7 @@ body {
       color: #fff;
       transition: all .0s ease-in-out; }
     body .navbar-inverse .navbar-nav > li > a:hover {
-      color: #9d0808;
+      color: red;
       transition: all .3s ease-in-out; }
     body .navbar-inverse .navbar-right {
       margin-right: 0px;
@@ -132,12 +132,23 @@ body {
 
 section .contiene {
   background-color: black;
-  border-bottom: 1px solid #666; }
+  border-bottom: 1px solid #666;
+  display: flex;
+  flex-wrap: wrap; }
+  section .contiene:before {
+    display: block; }
+  section .contiene > .imagen img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center; }
   section .contiene blockquote {
     margin-top: 7%;
-    border-left: 4px solid red; }
+    border-left: 4px solid red;
+    font-size: 15px; }
     section .contiene blockquote h3 {
-      color: #9d0808; }
+      color: #9d0808;
+      margin-top: 0; }
     section .contiene blockquote p {
       color: #cdcdcd; }
 
@@ -148,9 +159,13 @@ footer {
     padding-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.9); }
   footer .columna-footer-derecha {
-    text-align: left; }
+    text-align: center; }
+    footer .columna-footer-derecha img {
+      width: 50%; }
   footer .columna-footer-izquierda {
-    text-align: right; }
+    text-align: center; }
+    footer .columna-footer-izquierda img {
+      width: 50%; }
   footer .columna-footer-centro {
     text-align: center;
     color: #fff;
@@ -184,7 +199,7 @@ footer {
       list-style: none;
       display: block; }
       footer .columna-footer-centro .lista-redes li {
-        margin: 5px 7px;
+        margin: 5px 4px;
         display: inline-block; }
         footer .columna-footer-centro .lista-redes li a {
           color: #292929;
@@ -192,13 +207,13 @@ footer {
           display: inline-block;
           border-radius: 100%;
           line-height: 1;
-          width: 42px;
+          width: 30px;
           text-align: center;
           padding: 9px 0px;
-          font-size: 24px;
+          font-size: 14px;
           transition: all .2s ease-in; }
           footer .columna-footer-centro .lista-redes li a:hover {
-            color: rgba(0, 0, 0, 0.5);
+            color: #fff;
             background-color: #b10000; }
   footer .logo-footer {
     display: inline-block; }
@@ -207,8 +222,8 @@ footer {
   width: 100%;
   background-color: #000;
   color: #ccc;
-  padding-top: 7px;
-  padding-bottom: 7px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
   .linea-negra .columna-terminos {
     text-align: left; }
     .linea-negra .columna-terminos a {
@@ -220,6 +235,10 @@ footer {
     text-align: right; }
 
 @media (max-width: 767px) {
+  footer .columna-footer-centro .contiene-redes:before {
+    display: none; }
+  footer .columna-footer-centro .contiene-redes:after {
+    display: none; }
   .linea-negra .columna-terminos {
     text-align: center;
     margin-bottom: 15px; }
@@ -238,21 +257,28 @@ footer {
 .productos {
   background-color: rgba(0, 0, 0, 0.9); }
   .productos .thumbnail {
-    background-color: #f5f5f5;
-    border: 2px solid #b10000;
+    background-color: #101010;
+    border: 2px solid #6e746f;
     transition: all .2s ease-in; }
     .productos .thumbnail:hover {
-      border: 2px solid #f5f5f5;
+      border: 2px solid #6e746f;
       box-shadow: 0 0 15px 0 white; }
+  .productos .caption p {
+    text-align: center;
+    color: #fff; }
   .productos .caption h3 {
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
   .productos .caption .precio {
     text-align: center;
     font-size: 30px;
-    font-weight: bold;
-    color: #b10000; }
+    font-weight: 500;
+    color: #fff; }
   .productos .caption .boton {
     text-align: center; }
+    .productos .caption .boton a {
+      background: #b10000;
+      border-color: #b10000; }
 
 .carrito {
   background-image: url("../img/tramo.jpg"); }
